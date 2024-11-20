@@ -7,7 +7,7 @@ void setup()
   Serial.begin(115200);
   delay(5000);
 
-  if (Config::ssid)
+  if (Config::ssid != "")
   {
     if (Config::pass != "")
     {
