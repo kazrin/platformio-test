@@ -1,6 +1,6 @@
 #pragma once
 
-namespace Config
+namespace UserConfig
 {
     extern const char *ssid;
     extern const char *pass;

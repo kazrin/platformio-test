@@ -1,23 +1,23 @@
 #include <Arduino.h>
 #include <WiFi.h>
-#include <Config.h>
+#include <UserConfig.h>
 
 void setup()
 {
   Serial.begin(115200);
   delay(5000);
 
-  if (Config::ssid != "")
+  if (UserConfig::ssid != "")
   {
-    if (Config::pass != "")
+    if (UserConfig::pass != "")
     {
       Serial.println("Connecting to WiFi with SSID and password");
-      WiFi.begin(Config::ssid, Config::pass);
+      WiFi.begin(UserConfig::ssid, UserConfig::pass);
     }
     else
     {
       Serial.println("Connecting to WiFi with SSID");
-      WiFi.begin(Config::ssid);
+      WiFi.begin(UserConfig::ssid);
     }
     while (WiFi.status() != WL_CONNECTED)
     {
